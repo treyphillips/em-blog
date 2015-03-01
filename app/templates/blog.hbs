@@ -1,0 +1,23 @@
+{{#link-to "posts"}}<strong>New Post</strong>{{/link-to}}
+<!-- <section id="blog-titles"> -->
+
+<h1>Blog stupid</h1>
+
+  {{#each post in sortedPosts itemController="post"}}
+  <h1>Blog</h1>
+<div id="title">
+<h2>{{posts.model.title}}</h2>
+</div>
+
+<div id="content">
+  <h4>{{posts.model.content}}</h4>
+</div>
+
+
+<!-- </section> -->
+
+
+{{/each}}
+
+
+{{outlet}}
