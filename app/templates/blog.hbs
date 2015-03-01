@@ -1,23 +1,30 @@
-{{#link-to "posts"}}<strong>New Post</strong>{{/link-to}}
-<!-- <section id="blog-titles"> -->
+<input type="text" id="blog-search" placeholder="Blog Title Search" />
 
-<h1>Blog stupid</h1>
+<section id="main">
+  <ul id="blog-list">
+    {{#each post in model}}
+      <li class="completed">
+        <h2>{{posts.title}}</h2>
+        <p>{{posts.content}}</p>
+        <button class="destroy">X</button>
+      </li>
+    {{/each}}
+  </ul>
+</section>
 
-  {{#each post in sortedPosts itemController="post"}}
-  <h1>Blog</h1>
-<div id="title">
-<h2>{{posts.model.title}}</h2>
-</div>
-
-<div id="content">
-  <h4>{{posts.model.content}}</h4>
-</div>
-
-
-<!-- </section> -->
-
-
-{{/each}}
-
-
-{{outlet}}
+<footer id="footer">
+  <span id="blog-count">
+    <strong>2</strong> Blog Count
+  </span>
+  <!-- <ul id="filters">
+    <li>
+      <a href="Popular">Popular</a>
+    </li>
+    <li>
+      <a href="Recent">Recent</a>
+    </li>
+    <li>
+      <a href="Oldest">Oldest</a>
+    </li>
+  </ul> -->
+</footer>
